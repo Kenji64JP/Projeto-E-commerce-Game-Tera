@@ -1,31 +1,95 @@
-body {
-    background-color: rgba(5, 5, 5, 0.897);
-    margin: 5px auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;       
+body  {
+    background-color: rgba(5, 5, 5, 0.897)!important; 
+    /* margin: 5px auto; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;        
 }
+
 *{
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
-header {
-    background-color: rgb(83, 82, 88);     
+nav {
+    background-color: rgb(83, 82, 88);    
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+    height: 60px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
     padding: 6px 0;    
+    display: inline-block;    
  }
 
- .logo{
-     padding: 5px;
+ .nav-list{
+     float: right;
+     margin-right: 20px;
+     list-style: none;
  }
- .acess{
+
+ .nav-list li{
+    display: inline-block;
+	line-height: 25px;
+	margin: 0 10px;
+    vertical-align: middle;
+       
+ }
+
+ .nav-list li a{
+     font-size: 15px;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: rgb(245, 245, 245);        
+ }
+
+ .nav-list li a.active, a:hover {
+     background-color: rgb(63, 63, 68);
+     border-radius: 8px;
+     transition: .5s;
+
+ }
+
+label.logo{
+    background-color: rgb(245, 245, 245);    
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000000fd;
+    margin-left: 20px;
+    /* padding: 0 5px; */
+    border: 2px solid;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    width: 100px;    
+    /* vertical-align: middle;    */
+ }
+
+ label[for="menu-btn"]{
+    background-color: rgb(50, 50, 53); 
+    padding: 5px;  
+    margin-right: 20px;   
+    height: 40px;
+    border-radius: 5px;
+    float: right;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(245, 245, 245);
+    cursor: pointer;
+    display: none;
+ }
+
+ #menu-btn{
+     display: none;
+ }
+
+ 
+.acess{
      margin-right: 5px;
      padding: 5px;
-     float: right;
-     width: 2%;
+     width: 30px;
+     vertical-align: middle;     
  }
 
  h1{
@@ -35,62 +99,103 @@ header {
  }
 
  .video{     
-    margin: 10px;    
+    margin: 30px 0px;    
     text-align: center;
  }
 
  iframe{
-     width: 50%;
+     width: 80%;
      height: 433px;
+     border-radius: 12px;
  }
 
- button{
-     margin: 0 40% auto;
-     width: 20%;
-     background-color: rgb(154, 151, 187);     
-     padding: 10px;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     font-size: 12px;     
-     border-radius: 10px;
-     color: rgb(9, 9, 9); 
+ .compra{
+    background-color: rgb(154, 151, 187); 
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px black solid;
+    width: 20%;      
+    font-weight: bold;  
+    font-size: 15px;     
+    
+    color: rgb(9, 9, 9); 
+    display: block;
  }
 
  h2{
      margin: 10px 40px auto;
      text-decoration: underline;
      color: rgba(245, 245, 245, 0.842);
+   
  }
  .sobre{
      margin: 10 px;
      padding: 2%;
      width: 80%;
+     font-size: 20px;
      text-align: justify;
-     text-indent: 20px;
+     text-indent: 20px;     
      color: rgba(245, 245, 245, 0.842)
  }
 
  footer {
-    background-color: rgb(83, 82, 88); 
-    display: inline-block;    
-    
+    background-color: rgb(83, 82, 88);  
+    display: inline-block;
     width: 100%;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);        
-    text-align: center;
-    
+    height: auto;
+    box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;        
  }
 
  .rodape{
-    margin: 10px;
-    
+    margin: 10px;    
 }
 
 .logorodape{
     margin: 0 5px;    
-    width: 22px;
+    width: 30px;
     height: auto;
+    position: relative;
     float: left;
 }
 .assinatura{
-    font-size: 10px;
+    font-size: 12px;
     color: whitesmoke;
 }
+
+@media(max-width: 858px) {
+
+    label[for="menu-btn"]{
+        display: inline-block;
+    }
+
+    #menu-btn:checked ~ .nav-list{
+		left: 0;
+	}
+    .nav-list {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgb(116, 115, 122);
+		top: 60px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	.nav-list li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;        
+	}
+	.nav-list li a {
+		font-size: 25px;
+	}
+	.nav-list li a.active, a:hover {		
+		color: rgb(83, 82, 88);
+	}
+	
+    iframe{
+        width: 100%;
+    }
+};

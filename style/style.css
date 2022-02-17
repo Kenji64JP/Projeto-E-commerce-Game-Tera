@@ -1,44 +1,111 @@
-body {
-    background-color: rgba(5, 5, 5, 0.897);
-    margin: 5px auto;
+body  {
+    background-color: rgba(5, 5, 5, 0.897)!important; 
+    /* margin: 5px auto; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;        
 }
 
 *{
     margin: 0 auto;
     padding: 0;
+    list-style: none;
+    /* text-decoration: none; */
     box-sizing: border-box;
 }
-header {
+
+nav {
     background-color: rgb(83, 82, 88);    
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.842);
+    height: 60px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
     padding: 6px 0;    
+    display: inline-block;    
  }
 
-.logo{
-     padding: 5px;
+ .nav-list{
+     float: right;
+     margin-right: 20px;
+     list-style: none;
  }
- .acess{
+
+ .nav-list li{
+    display: inline-block;
+	line-height: 25px;
+	margin: 0 10px;
+    vertical-align: middle;
+       
+ }
+
+ .nav-list li a{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 15px;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: #D5FFF7 ;        
+ }
+
+ .nav-list li a.active, a:hover {
+     background-color: rgb(63, 63, 68);
+     border-radius: 8px;
+     transition: .5s;
+
+ }
+
+label.logo{
+    background-color: rgb(245, 245, 245);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000000fd;
+    margin-left: 20px;
+    /* padding: 0 5px; */
+    border: 2px solid;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    width: 100px;
+    
+ }
+
+ label[for="menu-btn"]{
+    background-color: rgb(50, 50, 53); 
+    padding: 5px;  
+    margin-right: 20px;   
+    height: 40px;
+    border-radius: 5px;
+    float: right;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(245, 245, 245);
+    cursor: pointer;
+    display: none;
+ }
+
+ #menu-btn{
+     display: none;
+ }
+
+ 
+.acess{
      margin-right: 5px;
      padding: 5px;
-     float: right;
-     width: 2%;
-     
+     width: 30px;
+     vertical-align: middle;
+    font-weight: bold;
  }
 
 .content{
-    background-image: url(../img/forza.jpg);
-    background-color: rgba(21, 21, 22, 0.863);
+    background-image: url(../img/forza2.jpg);
+    background-color: rgba(5, 5, 5, 0.897);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
     width: 70%;
-    margin-top: 60px;
-    margin-bottom: 20px;
+    margin-top: 70px;
+    margin-bottom: 20px;    
     border-radius: 0.5em;
     position: center;    
     display: flex;
@@ -46,7 +113,7 @@ header {
 }
 
 .center{
-    background-color: rgba(26, 16, 16, 0.8);
+    background-color: rgba(5, 5, 5, 0.897);
     margin: 0 auto;
     padding: 1em;
     font-size: 0.8em;   
@@ -57,83 +124,61 @@ header {
 
 .boasvindas{
     text-align: center;
-    color: rgba(231, 45, 45, 0.911);
+    color: #D5FFF7;
 }
 .intro{
     margin: 20px auto;
     padding: 0 40px;
     width: 60%;
     text-align: center;
-    font-size: 15px;
-    color: whitesmoke;
+    font-size: 20px;
+    color: rgb(245, 245, 245);
 }
-hr{
-    margin: 0 auto;
-    width: 60%;    
+hr {
+    margin: 10px auto!important;
+    width: 80%!important;   
+    height: 2px!important; 
+    color: antiquewhite!important;
 }
 
-h2{
-    color: rgba(231, 45, 45, 0.911);
-    margin: 10px;
+.tipo-de-jogo{
+    color: #D5FFF7;
+    margin: 20px;
     text-align: center;
     text-decoration: underline;
-
+    text-transform: uppercase;
 }
 
-/* .acao{
-    margin: 20px;
-    display: block;
-    text-align: center;
-} */
-/* .jogosdeacao{
-    /* margin: 10px; 
-    text-align: center;
-    
-} */
-.ul{
-    /* margin: 0 auto; */
-    padding: 0 20%;
-    display: flex;    
-    width: 100%;
-    
-}
-.Jogos{
-    /* margin: 0 auto; */
-    display: inline;
-    width: 20%; 
-          
+h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(245, 245, 245);
+    text-align: left;
 } 
+
+.Jogos{
+    padding: 5px;
+    display: inline;
+    width: 100%;           
+} 
+
 .capa{
     width: 100%;        
     height: 250px;
-}
-
-.item{
-    display: flex;
-    flex-direction: column;
-    
-}
-a{
-    margin: 10px;
-    color: whitesmoke;
-    text-align: center;
-}
-
-/* .buttons{
-    text-align: center;
-    
-    
-}*/
-button{
-    width: 80%;    
-    background-color: rgb(22, 11, 175);     
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;     
     border-radius: 10px;
-    color: whitesmoke; 
+}
 
-    
-} 
+.item{    
+    width: 200px; 
+    text-align: center;       
+}
+.item h4{
+    text-align: center;
+}
+.paginaDoJogo {
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(245, 245, 245);      
+}
 
 .corrida{
     margin: 20px auto;
@@ -149,33 +194,65 @@ button{
 }
 
 footer {
-    background-color: rgb(83, 82, 88); 
-    display: inline-block;    
-    
+    background-color: rgb(83, 82, 88);  
+    display: inline-block;
     width: 100%;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);        
-    text-align: center;
-    
+    height: auto;
+    box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;        
  }
 
- /* footer li{
-    margin: 0 1px auto;
-    display: inline;
-    
-} */
-
-.rodape{
-    margin: 10px;
-    
+ .rodape{
+    margin: 10px;    
 }
 
 .logorodape{
     margin: 0 5px;    
-    width: 22px;
+    width: 30px;
     height: auto;
+    position: relative;
     float: left;
 }
-p{
-    font-size: 10px;
+.assinatura{
+    font-size: 12px;
     color: whitesmoke;
 }
+
+/* @media only screen and (min-width: 576px) {}; */
+@media(max-width: 858px) {
+
+    label[for="menu-btn"]{
+        display: inline-block;
+    }
+
+    #menu-btn:checked ~ .nav-list{
+		left: 0;
+	}
+    .nav-list {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgb(116, 115, 122);
+		top: 60px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	.nav-list li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+        /* float: right; */
+	}
+	.nav-list li a {
+		font-size: 25px;
+	}
+	.nav-list li a.active, a:hover {		
+		color: rgb(83, 82, 88);
+	}
+	
+};
+/* @media only screen and (min-width: 992px) {};
+@media only screen and (min-width: 1200px) {};
+@media only screen and (min-width: 1400px) {}; */
+/* @media only screen and (max-width: 760px) {}
