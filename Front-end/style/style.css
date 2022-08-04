@@ -1,12 +1,14 @@
 body  {
-    background-color: rgba(5, 5, 5, 0.897)!important;     
+    background-color: rgba(5, 5, 5, 0.897)!important; 
+    /* margin: 5px auto; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;        
 }
 
 *{
     margin: 0 auto;
     padding: 0;
-    list-style: none;    
+    list-style: none;
+    /* text-decoration: none; */
     box-sizing: border-box;
 }
 
@@ -32,7 +34,7 @@ nav {
 	line-height: 25px;
 	margin: 0 10px;
     vertical-align: middle;
-
+       
  }
 
  .nav-list li a{
@@ -48,7 +50,7 @@ nav {
      border-radius: 8px;
      transition: .5s;
 
- } 
+ }
 
 label.logo{
     background-color: rgb(245, 245, 245);
@@ -56,14 +58,15 @@ label.logo{
     font-size: 18px;
     text-transform: uppercase;
     color: #000000fd;
-    margin-left: 20px;    
+    margin-left: 20px;
+    /* padding: 0 5px; */
     border: 2px solid;
     border-radius: 5px;
     text-align: center;
     line-height: 40px;
     font-weight: bold;
     width: 100px;
-
+    
  }
 
  label[for="menu-btn"]{
@@ -84,16 +87,114 @@ label.logo{
      display: none;
  }
 
-
-.acess{
+ 
+.acess{   
     margin-right: 5px;
     padding: 5px;
-    float: right;
-    width: 2%;
+    width: 30px;
+    vertical-align: middle;
+    font-weight: bold;
  }
+
+.content{
+    background-image: url(/Front-end/img/forza.jpg);
+    background-color: rgba(5, 5, 5, 0.897);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 70%;
+    margin-top: 70px;
+    margin-bottom: 20px;    
+    border-radius: 0.5em;
+    position: center;    
+    display: flex;
+    align-items: center;      
+}
+
+.center{
+    background-color: rgba(5, 5, 5, 0.897);
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 0.8em;   
+    width: 40%; 
+    border-radius: 0.5em;          
+    
+}
+
+.boasvindas{
+    text-align: center;
+    color: #D5FFF7;
+}
+.intro{
+    margin: 20px auto;
+    padding: 0 40px;
+    width: 60%;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(245, 245, 245);
+}
+hr {
+    margin: 10px auto!important;
+    width: 80%!important;   
+    height: 2px!important; 
+    color: antiquewhite!important;
+}
+
+.tipo-de-jogo{
+    color: #D5FFF7;
+    margin: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+h3{
+    text-decoration: none;
+}
+h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(245, 245, 245);
+    text-align: left;
+    text-decoration: none;
+} 
+
+.Jogos{
+    padding: 5px;
+    display: inline;
+    width: 100%;           
+} 
+
+.capa{
+    width: 100%;        
+    height: 250px;
+    border-radius: 10px;
+}
+
+.item{    
+    width: 200px; 
+    text-align: center;       
+}
+.item h4{
+    text-align: center;
+}
+.paginaDoJogo {
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(245, 245, 245);      
+}
+
+.corrida{
+    margin: 20px auto;
+    text-align: center;
+}
 
 .login{
     width: 22px;
+}
+.corrida li{
+    margin: 10px ;
+    display: inline-block;
 }
 
 footer {
@@ -145,7 +246,7 @@ footer {
 		display: block;
 		margin: 50px 0;
 		line-height: 30px;
-
+        /* float: right; */
 	}
 	.nav-list li a {
 		font-size: 25px;
@@ -153,5 +254,9 @@ footer {
 	.nav-list li a.active, a:hover {		
 		color: rgb(83, 82, 88);
 	}
-
+	
 };
+/* @media only screen and (min-width: 992px) {};
+@media only screen and (min-width: 1200px) {};
+@media only screen and (min-width: 1400px) {}; */
+/* @media only screen and (max-width: 760px) {}

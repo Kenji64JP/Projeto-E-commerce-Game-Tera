@@ -1,10 +1,10 @@
 const userSchema = require('../model/userSchema')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 const SECRET = process.env.SECRET
 
-const login = (req, res) => {
+const login = (req, res, next) => {
     try {
         userSchema.findOne({ email: req.body.email }, (error, user) => {
             if(!user) {
@@ -30,7 +30,7 @@ const login = (req, res) => {
             })
         })
     } catch(error) {
-        console.error(error)
+        res.status(403).send(error)
     }
 }
 

@@ -1,7 +1,7 @@
 const userSchema = require("../model/userSchema")
-const bcrypt = require("bcrypt")
-// const mongoose = require ('mongoose')
-// const { find } = require("../model/userSchema")
+const bcrypt = require("bcryptjs")
+const mongoose = require ('mongoose')
+const { find } = require("../model/userSchema")
 
 const getAll = async (req, res) => {
     try {
